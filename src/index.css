@@ -34,7 +34,7 @@
   .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
   .section-padding { padding: 100px 0; }
   .text-center { text-align: center; }
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
   .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
   .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
   
@@ -117,7 +117,7 @@
   .check-list-simple i { color: var(--brand-primary); }
   
   /* =========================================
-     6. ABOUT PAGE STYLES (FIXED)
+     6. ABOUT PAGE STYLES (FIXED - NO BOXES)
      ========================================= */
   /* Feature Cards */
   .feature-card { background: var(--card-bg); padding: 2.5rem; border-radius: 20px; border: 1px solid var(--border-light); text-align: left; }
@@ -128,30 +128,32 @@
   .step-number { font-size: 3rem; font-weight: 800; color: rgba(0,0,0,0.05); margin-bottom: -1rem; display: block; }
   [data-theme='dark'] .step-number { color: rgba(255,255,255,0.05); }
   
-  /* About Page Stats Grid (The 4 Boxes) */
+  /* About Stats - CLEAN LAYOUT (No Boxes) */
   .about-stats-container { 
       display: grid; 
       grid-template-columns: 1fr 1fr; 
-      gap: 1rem; 
-      background: var(--pill-bg); 
+      gap: 3rem; 
       padding: 1rem; 
-      border-radius: 24px; 
+      /* Removed background/border to match design */
   }
+  
   .about-stat-box { 
-      background: var(--card-bg); 
-      padding: 2rem; 
-      border-radius: 16px; 
-      text-align: center; 
-      box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
-      border: 1px solid var(--border-light);
-      transition: transform 0.3s ease;
+      background: transparent; /* No background */
+      padding: 0; 
+      border-radius: 0; 
+      text-align: left; /* Aligned left */
+      box-shadow: none; 
+      border: none;
   }
-  .about-stat-box:hover { transform: translateY(-5px); border-color: var(--brand-primary); }
+  
   .about-stat-box h4 { 
-      font-size: 2rem; font-weight: 800; 
-      color: var(--brand-primary); margin-bottom: 0.5rem; line-height: 1;
+      font-size: 1.8rem; font-weight: 800; 
+      color: var(--text-main); margin-bottom: 0.2rem; line-height: 1;
   }
-  .about-stat-box p { font-size: 0.85rem; margin: 0; font-weight: 600; }
+  
+  .about-stat-box p { 
+      font-size: 1rem; margin: 0; font-weight: 500; color: var(--text-body);
+  }
   
   /* =========================================
      7. SERVICES PAGE STYLES
@@ -162,13 +164,13 @@
   .service-content h3 { margin-bottom: 1rem; font-size: 2rem; font-weight: 700; }
   .service-content p { color: var(--text-body); line-height: 1.6; margin-bottom: 2rem; }
   
-  /* General Checklist (Used in Services) */
+  /* General Checklist */
   .check-list-styled { list-style: none; padding: 0; margin: 2rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .check-list-styled li { font-size: 0.95rem; color: var(--text-main); display: flex; align-items: start; gap: 12px; font-weight: 500; }
-  .check-list-styled i { color: var(--brand-primary); font-size: 1.1rem; margin-top: 3px; }
+  .check-list-styled li { font-size: 1.05rem; color: var(--text-main); display: flex; align-items: start; gap: 15px; font-weight: 500; }
+  .check-list-styled i { color: var(--brand-primary); font-size: 1.2rem; margin-top: 3px; }
   
-  /* Special Override for About Page List (1 Column) */
-  .about-list { grid-template-columns: 1fr !important; gap: 1.5rem; }
+  /* Override for About Page List (1 Column, spacing) */
+  .about-list { grid-template-columns: 1fr !important; gap: 2rem; }
   
   .service-deliverables { background: var(--bg-body); padding: 2.5rem; border-radius: 24px; border: 1px solid var(--border-light); }
   .service-deliverables h4 { font-size: 1rem; color: var(--text-body); margin-bottom: 1.5rem; font-weight: 600; }
