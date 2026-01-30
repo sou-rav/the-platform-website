@@ -57,8 +57,8 @@ export default function About() {
                 <h2>Why Choose <span className="gradient-text">The Platform?</span></h2>
                 <p style={{ marginLeft: 0 }}>We combine deep expertise with a client-first approach to deliver solutions that actually work. Here is what sets us apart:</p>
                 
-                {/* 1-Column List with Circle Checks */}
-                <ul className="check-list-styled" style={{ gridTemplateColumns: '1fr' }}>
+                {/* 1-Column List for About Page */}
+                <ul className="check-list-styled about-list">
                     <li>
                         <i className="fa-solid fa-circle-check"></i> 
                         <span><strong>Collaborative Approach:</strong> We work with you, not just for you.</span>
@@ -78,12 +78,12 @@ export default function About() {
                 </ul>
             </div>
 
-            {/* Right: Stats Grid */}
-            <div className="stats-container">
-                <div className="stat-box"><h4>360°</h4><p>Integrated Solutions</p></div>
-                <div className="stat-box"><h4>100%</h4><p>Market Driven</p></div>
-                <div className="stat-box"><h4>24/7</h4><p>Brand Impact</p></div>
-                <div className="stat-box"><h4>Results</h4><p>Focused Approach</p></div>
+            {/* Right: Stats Grid (The 4 Boxes) */}
+            <div className="about-stats-container">
+                <div className="about-stat-box"><h4>360°</h4><p>Integrated Solutions</p></div>
+                <div className="about-stat-box"><h4>100%</h4><p>Market Driven</p></div>
+                <div className="about-stat-box"><h4>24/7</h4><p>Brand Impact</p></div>
+                <div className="about-stat-box"><h4>Results</h4><p>Focused Approach</p></div>
             </div>
         </div>
       </section>

@@ -34,7 +34,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. CAPABILITIES GRID (6 Items) */}
+      {/* 2. CAPABILITIES GRID */}
       <section className="section-padding container reveal active" style={{ background: 'var(--pill-bg)', borderRadius: '30px' }}>
         <div className="text-center" style={{ marginBottom: '4rem' }}>
             <span className="tagline-pill">Our Capabilities</span>
@@ -45,47 +45,36 @@ export default function Home() {
         </div>
         
         <div className="grid-3">
-            {/* Card 1 */}
             <div className="home-service-card">
                 <div className="icon-box-small"><i className="fa-solid fa-chess"></i></div>
                 <h3>Brand Strategy</h3>
                 <p>Research-driven insights and positioning frameworks that align brand purpose with business objectives.</p>
                 <span className="card-tag">Strategic Foundation</span>
             </div>
-
-            {/* Card 2 */}
             <div className="home-service-card">
                 <div className="icon-box-small"><i className="fa-solid fa-fingerprint"></i></div>
                 <h3>Brand Identity</h3>
                 <p>Logo design and visual systems that communicate credibility, consistency, and recognition.</p>
                 <span className="card-tag">Visual Systems</span>
             </div>
-
-            {/* Card 3 */}
             <div className="home-service-card">
                 <div className="icon-box-small"><i className="fa-solid fa-pen-nib"></i></div>
                 <h3>Creative Design</h3>
                 <p>Design solutions driven by concept, clarity, and craft to enhance brand perception.</p>
                 <span className="card-tag">Visual Excellence</span>
             </div>
-
-            {/* Card 4 */}
             <div className="home-service-card">
                 <div className="icon-box-small"><i className="fa-solid fa-chart-line"></i></div>
                 <h3>Integrated Marketing</h3>
                 <p>Strategic frameworks that connect brands with their audience through the right channels.</p>
                 <span className="card-tag">Growth Strategy</span>
             </div>
-
-            {/* Card 5 */}
             <div className="home-service-card">
                 <div className="icon-box-small"><i className="fa-solid fa-mobile-screen"></i></div>
                 <h3>Digital Campaigns</h3>
                 <p>Impactful digital activations that increase visibility, engagement, and conversion.</p>
                 <span className="card-tag">Online Impact</span>
             </div>
-
-            {/* Card 6 */}
             <div className="home-service-card">
                 <div className="icon-box-small"><i className="fa-solid fa-book-open"></i></div>
                 <h3>Content Storytelling</h3>
@@ -99,23 +88,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. WHY CHOOSE US (Testimonial Style) */}
+      {/* 3. WHY CHOOSE US - REDESIGNED TO MATCH SCREENSHOT */}
       <section className="section-padding container reveal active">
-        <div className="grid-2" style={{ alignItems: 'center' }}>
-            <div>
-                <span className="tagline-pill">Why Choose Us</span>
-                <h2>Collaborative & <br/><span className="gradient-text">Insight-Driven</span></h2>
-            </div>
+        <div className="text-center" style={{ marginBottom: '3rem' }}>
+            <span className="tagline-pill">Why Choose Us</span>
+            <h2>Collaborative & <span className="gradient-text">Insight-Driven</span></h2>
+        </div>
             
-            <div className="feature-card" style={{ padding: '3rem' }}>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Client-First Approach</h3>
-                <p style={{ fontStyle: 'italic', fontSize: '1.1rem', marginBottom: '2rem' }}>
+        {/* The Big Dark Card */}
+        <div className="why-us-card">
+            {/* Left Side: Big Icon */}
+            <div className="why-us-icon">
+                <i className="fa-solid fa-handshake"></i>
+            </div>
+
+            {/* Right Side: Content */}
+            <div className="why-us-content">
+                <h3>Client-First Approach</h3>
+                <p className="quote-text">
                     "We work closely with our clients to understand their goals, challenges, and audience, ensuring every solution is relevant, scalable, and results-focused."
                 </p>
-                <ul className="check-list-styled">
-                    <li><i className="fa-solid fa-circle-check"></i> Strategic Thinking</li>
-                    <li><i className="fa-solid fa-circle-check"></i> Impactful Design</li>
-                    <li><i className="fa-solid fa-circle-check"></i> Performance Driven</li>
+                <ul className="check-list-simple">
+                    <li><i className="fa-solid fa-check"></i> Strategic Thinking</li>
+                    <li><i className="fa-solid fa-check"></i> Impactful Design</li>
+                    <li><i className="fa-solid fa-check"></i> Performance Driven</li>
                 </ul>
             </div>
         </div>
