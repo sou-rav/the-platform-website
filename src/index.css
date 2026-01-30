@@ -95,7 +95,7 @@
   
   p { margin-bottom: 1rem; font-size: 1.05rem; }
   
-  /* FIXED: Standard property added for compatibility */
+  /* Gradient Text with Compatibility Fix */
   .gradient-text {
     background: linear-gradient(90deg, var(--brand-primary), #4caf50);
     -webkit-background-clip: text; /* Vendor prefix */
@@ -222,34 +222,85 @@
   .delay-300 { transition-delay: 0.3s; }
   
   /* =========================================
-     7. ABOUT PAGE STYLES
+     7. HOME PAGE STYLES
      ========================================= */
-  /* Feature Cards */
+  /* Hero Stats */
+  .hero-stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      margin-top: 4rem;
+      flex-wrap: wrap;
+  }
+  .hero-stat-item h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.2rem;
+      color: var(--text-main);
+  }
+  .hero-stat-item p { margin: 0; font-size: 0.9rem; color: var(--text-body); }
+  
+  /* Home Service Cards (Small Grid) */
+  .home-service-card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 24px;
+      border: 1px solid var(--border-light);
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+  }
+  .home-service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border-color: var(--brand-primary);
+  }
+  .icon-box-small {
+      width: 45px; height: 45px;
+      background: var(--pill-bg);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--brand-primary);
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+  }
+  .card-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--brand-primary);
+      letter-spacing: 1px;
+      margin-top: 1rem;
+  }
+  
+  /* =========================================
+     8. ABOUT PAGE STYLES
+     ========================================= */
   .feature-card {
-    background: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 20px;
-    border: 1px solid var(--border-light);
-    text-align: left;
+      background: var(--card-bg);
+      padding: 2.5rem;
+      border-radius: 20px;
+      border: 1px solid var(--border-light);
+      text-align: left;
   }
   .icon-box {
-    width: 50px; height: 50px;
-    background: var(--pill-bg);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem; color: var(--brand-primary);
+      width: 50px; height: 50px;
+      background: var(--pill-bg);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem; color: var(--brand-primary);
   }
   
   /* Process Steps */
   .step-card { text-align: center; padding: 1.5rem; }
   .step-number {
-    font-size: 3rem; font-weight: 800; color: rgba(0,0,0,0.05);
-    margin-bottom: -1rem; display: block;
+      font-size: 3rem; font-weight: 800; color: rgba(0,0,0,0.05);
+      margin-bottom: -1rem; display: block;
   }
   [data-theme='dark'] .step-number { color: rgba(255,255,255,0.05); }
   
-  /* Why Choose Us - Stats Grid (THE BOXES FIX) */
+  /* Stats Boxes */
   .stats-container { 
       display: grid; 
       grid-template-columns: 1fr 1fr; 
@@ -258,7 +309,6 @@
       padding: 1rem; 
       border-radius: 24px; 
   }
-  
   .stat-box { 
       background: var(--card-bg); 
       padding: 2rem; 
@@ -279,7 +329,7 @@
   .stat-box p { font-size: 0.85rem; margin: 0; font-weight: 600; }
   
   /* =========================================
-     8. SERVICES PAGE STYLES (UPDATED)
+     9. SERVICES PAGE STYLES (DETAILED)
      ========================================= */
   .service-detail-card {
       background: var(--card-bg);
@@ -323,9 +373,9 @@
   }
   .check-list-styled li {
       font-size: 0.95rem; color: var(--text-main);
-      display: flex; align-items: center; gap: 12px; font-weight: 500;
+      display: flex; align-items: start; gap: 12px; font-weight: 500;
   }
-  .check-list-styled i { color: var(--brand-primary); font-size: 1.1rem; }
+  .check-list-styled i { color: var(--brand-primary); font-size: 1.1rem; margin-top: 3px; }
   
   /* OVERRIDE: Force 1 Column for About Page Lists */
   .grid-2 .check-list-styled {
@@ -355,7 +405,7 @@
   }
   
   /* =========================================
-     9. CONTACT PAGE
+     10. CONTACT & FOOTER
      ========================================= */
   .contact-sidebar { display: flex; flex-direction: column; gap: 2rem; }
   .contact-card {
@@ -366,9 +416,6 @@
   }
   .full-width { width: 100%; text-align: center; }
   
-  /* =========================================
-     10. FOOTER
-     ========================================= */
   footer {
       background: #000; color: #fff; padding: 4rem 0 2rem; margin-top: 4rem;
   }
@@ -392,6 +439,7 @@
       grid-template-columns: 1fr;
     }
     .check-list-styled { grid-template-columns: 1fr !important; }
+    .hero-stats-row { gap: 2rem; }
     
     .menu-toggle { display: block; }
     .nav-links {

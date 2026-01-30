@@ -57,22 +57,23 @@ export default function About() {
                 <h2>Why Choose <span className="gradient-text">The Platform?</span></h2>
                 <p style={{ marginLeft: 0 }}>We combine deep expertise with a client-first approach to deliver solutions that actually work. Here is what sets us apart:</p>
                 
-                <ul className="check-list-styled" style={{ gridTemplateColumns: '1fr', gap: '1.2rem', marginTop: '2rem' }}>
-                    <li style={{ fontSize: '1rem' }}>
-                        <i className="fa-solid fa-circle-check" style={{ fontSize: '1.2rem' }}></i> 
-                        <strong>Collaborative Approach:</strong> We work with you, not just for you.
+                {/* 1-Column List with Circle Checks */}
+                <ul className="check-list-styled" style={{ gridTemplateColumns: '1fr' }}>
+                    <li>
+                        <i className="fa-solid fa-circle-check"></i> 
+                        <span><strong>Collaborative Approach:</strong> We work with you, not just for you.</span>
                     </li>
-                    <li style={{ fontSize: '1rem' }}>
-                        <i className="fa-solid fa-circle-check" style={{ fontSize: '1.2rem' }}></i> 
-                        <strong>Insight-Driven:</strong> Decisions based on research, not guesswork.
+                    <li>
+                        <i className="fa-solid fa-circle-check"></i> 
+                        <span><strong>Insight-Driven:</strong> Decisions based on research, not guesswork.</span>
                     </li>
-                    <li style={{ fontSize: '1rem' }}>
-                        <i className="fa-solid fa-circle-check" style={{ fontSize: '1.2rem' }}></i> 
-                        <strong>Long-Term Focus:</strong> Building brands that sustain growth.
+                    <li>
+                        <i className="fa-solid fa-circle-check"></i> 
+                        <span><strong>Long-Term Focus:</strong> Building brands that sustain growth.</span>
                     </li>
-                    <li style={{ fontSize: '1rem' }}>
-                        <i className="fa-solid fa-circle-check" style={{ fontSize: '1.2rem' }}></i> 
-                        <strong>Scalable Solutions:</strong> Strategies that grow with your business.
+                    <li>
+                        <i className="fa-solid fa-circle-check"></i> 
+                        <span><strong>Scalable Solutions:</strong> Strategies that grow with your business.</span>
                     </li>
                 </ul>
             </div>
