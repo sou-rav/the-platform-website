@@ -266,3 +266,42 @@ a[href^="mailto:"]:hover { color: var(--brand-primary); text-decoration: underli
     }
     .btn-outline { margin-bottom: 0; }
 }
+
+/* --- ABOUT PAGE: WHY CHOOSE US SECTION --- */
+.stats-container { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 1rem; 
+    background: var(--pill-bg); 
+    padding: 1rem; 
+    border-radius: 24px; 
+}
+
+.stat-box { 
+    background: var(--card-bg); 
+    padding: 2rem; 
+    border-radius: 16px; 
+    text-align: center; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
+    border: 1px solid var(--border-light);
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    border-color: var(--brand-primary);
+}
+
+.stat-box h4 { 
+    font-size: 2rem; 
+    font-weight: 800; 
+    color: var(--brand-primary); 
+    margin-bottom: 0.5rem; 
+    line-height: 1;
+}
+
+.stat-box p {
+    font-size: 0.85rem;
+    margin: 0;
+    font-weight: 600;
+}
