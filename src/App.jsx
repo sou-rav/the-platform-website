@@ -1,5 +1,5 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -10,25 +10,37 @@ import Contact from './pages/Contact';
 function App() {
   const location = useLocation();
 
-  // Logic to update the Browser Tab Title
+  // 1. Page Fade-In Logic & Scroll Top on Route Change
   useEffect(() => {
-    switch (location.pathname) {
-      case '/':
-        document.title = 'The Platform | Home';
-        break;
-      case '/about':
-        document.title = 'The Platform | About Us';
-        break;
-      case '/services':
-        document.title = 'The Platform | Services';
-        break;
-      case '/contact':
-        document.title = 'The Platform | Contact';
-        break;
-      default:
-        document.title = 'The Platform';
-    }
+    document.body.classList.remove('loaded');
+    window.scrollTo(0, 0); // Scroll to top instantly
+    
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 50);
+
+    // Dynamic Title
+    const path = location.pathname;
+    if(path === '/') document.title = 'The Platform | Home';
+    if(path === '/about') document.title = 'The Platform | About';
+    if(path === '/services') document.title = 'The Platform | Services';
+    if(path === '/contact') document.title = 'The Platform | Contact';
+
   }, [location]);
+
+  // 2. Scroll Animation (The "Reveal" Effect)
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) { entry.target.classList.add('active'); }
+        });
+    }, { threshold: 0.1 });
+
+    const elements = document.querySelectorAll('.reveal');
+    elements.forEach(el => observer.observe(el));
+
+    return () => elements.forEach(el => observer.unobserve(el));
+  });
 
   return (
     <>

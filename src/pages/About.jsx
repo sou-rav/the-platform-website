@@ -1,26 +1,24 @@
 export default function About() {
   return (
     <>
-      {/* 1. Hero Section */}
-      <section className="section-padding container text-center reveal active">
+      <section className="section-padding container text-center reveal">
         <span className="tagline-pill">About The Platform</span>
         <h1>Building Brands with <br/><span className="gradient-text">Clarity & Purpose</span></h1>
         
-        <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', color: 'var(--text-body)' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--text-main)' }}>
                 The Platform was established to help brands compete, grow, and lead in an ever-evolving marketplace. We operate at the intersection of strategy, creativity, and marketing, delivering integrated solutions that strengthen brand presence and business performance.
             </p>
-            <p>
+            <p style={{ fontSize: '1rem', marginBottom: '1.5rem' }}>
                 Our approach is collaborative and insight-driven. We work closely with our clients to understand their goals, challenges, and audience, ensuring every solution is relevant, scalable, and results-focused.
             </p>
-            <p>
+            <p style={{ fontSize: '1rem' }}>
                 From brand strategy and identity to creative execution and marketing activation, The Platform delivers excellence at every stage of the brand journey.
             </p>
         </div>
       </section>
 
-      {/* 2. Mission & Vision */}
-      <section className="container reveal delay-100 active" style={{ marginBottom: '6rem' }}>
+      <section className="container reveal delay-100">
         <div className="grid-2">
             <div className="feature-card">
                 <div className="icon-box"><i className="fa-solid fa-bullseye"></i></div>
@@ -35,8 +33,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* 3. Process Section */}
-      <section className="section-padding container reveal active" style={{ background: 'var(--pill-bg)', borderRadius: '30px' }}>
+      <section className="section-padding container reveal">
         <div className="text-center" style={{ marginBottom: '3rem' }}>
             <h2>How We Work</h2>
             <p>Our streamlined process ensures efficient delivery without compromising quality.</p>
@@ -49,41 +46,23 @@ export default function About() {
         </div>
       </section>
 
-      {/* 4. Why Choose Us Section */}
-      <section className="section-padding container reveal active">
-        <div className="grid-2" style={{ alignItems: 'center' }}>
-            {/* Left: Text Content */}
+      <section className="container reveal" style={{ marginBottom: '6rem' }}>
+        <div className="grid-2">
             <div>
                 <h2>Why Choose <span className="gradient-text">The Platform?</span></h2>
-                <p style={{ marginLeft: 0 }}>We combine deep expertise with a client-first approach to deliver solutions that actually work. Here is what sets us apart:</p>
-                
-                {/* 1-Column List for About Page */}
-                <ul className="check-list-styled about-list">
-                    <li>
-                        <i className="fa-solid fa-circle-check"></i> 
-                        <span><strong>Collaborative Approach:</strong> We work with you, not just for you.</span>
-                    </li>
-                    <li>
-                        <i className="fa-solid fa-circle-check"></i> 
-                        <span><strong>Insight-Driven:</strong> Decisions based on research, not guesswork.</span>
-                    </li>
-                    <li>
-                        <i className="fa-solid fa-circle-check"></i> 
-                        <span><strong>Long-Term Focus:</strong> Building brands that sustain growth.</span>
-                    </li>
-                    <li>
-                        <i className="fa-solid fa-circle-check"></i> 
-                        <span><strong>Scalable Solutions:</strong> Strategies that grow with your business.</span>
-                    </li>
+                <p style={{ marginBottom: '2rem' }}>We combine deep expertise with a client-first approach to deliver solutions that actually work. Here is what sets us apart:</p>
+                <ul className="check-list-styled" style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                    <li><i className="fa-solid fa-circle-check" style={{ fontSize: '1.1rem' }}></i> <strong>Collaborative Approach:</strong> We work with you, not just for you.</li>
+                    <li><i className="fa-solid fa-circle-check" style={{ fontSize: '1.1rem' }}></i> <strong>Insight-Driven:</strong> Decisions based on research, not guesswork.</li>
+                    <li><i className="fa-solid fa-circle-check" style={{ fontSize: '1.1rem' }}></i> <strong>Long-Term Focus:</strong> Building brands that sustain growth.</li>
+                    <li><i className="fa-solid fa-circle-check" style={{ fontSize: '1.1rem' }}></i> <strong>Scalable Solutions:</strong> Strategies that grow with your business.</li>
                 </ul>
             </div>
-
-            {/* Right: Stats Grid (The 4 Boxes) */}
-            <div className="about-stats-container">
-                <div className="about-stat-box"><h4>360°</h4><p>Integrated Solutions</p></div>
-                <div className="about-stat-box"><h4>100%</h4><p>Market Driven</p></div>
-                <div className="about-stat-box"><h4>24/7</h4><p>Brand Impact</p></div>
-                <div className="about-stat-box"><h4>Results</h4><p>Focused Approach</p></div>
+            <div className="stats-container">
+                <div className="stat-box wide"><h4>360°</h4><span>Integrated Solutions</span></div>
+                <div className="stat-box"><h4>100%</h4><span>Market Driven</span></div>
+                <div className="stat-box"><h4>24/7</h4><span>Brand Impact</span></div>
+                <div className="stat-box wide" style={{ background: 'var(--brand-primary)', color: '#000' }}><h4 style={{ color: '#000' }}>Results</h4><span style={{ color: '#333' }}>Focused Approach</span></div>
             </div>
         </div>
       </section>
